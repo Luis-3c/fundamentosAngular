@@ -5,16 +5,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CitiesTableComponent } from './components/cities-table/cities-table.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CitiesTableComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+<table class="table">
+    <thead class="thead-dark">
+        <th>#</th>
+        <th>Ciudad</th>
+        <th>País</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of citiesList; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{c.city}}</td>
+            <td>{{c.country}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-success" (click)="resetTable()">Reset</button>
