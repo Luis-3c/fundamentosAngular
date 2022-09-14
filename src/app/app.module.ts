@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CitiesTableComponent } from './components/cities-table/cities-table.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { APIComponent } from './pages/api/api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { APIComponent } from './pages/api/api.component';
     CitiesTableComponent,
     NavbarComponent,
     APIComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
