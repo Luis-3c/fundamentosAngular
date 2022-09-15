@@ -1,4 +1,13 @@
-<p>Hola, que tal soy el componente API! y te traere cosas de internet!</p>
+<ng-container *ngIf="loading; else elseBlock">
+    <div class="container mt-5 p-2">
+        <h2>CARGANDO....</h2>
+    </div>
+</ng-container>
+<ng-template #elseBlock>
+    <div class="container mt-5 p-2" [ngStyle]="{'background-color': selectedBgColor}">
+        <p>Hola, que tal soy el componente API! y te traere cosas de internet!</p>
 
-<p>{{ResultApi}}</p>
+        <p>{{ResultApi}}</p>
+    </div>
+</ng-template>
 
