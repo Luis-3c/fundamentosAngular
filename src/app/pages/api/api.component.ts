@@ -11,6 +11,8 @@ import { Frase } from "../../modelos/frase";
 export class APIComponent implements OnInit {
 
   public ResultApi: string = "";
+  public Calculo1: number = 0;
+  public Calculo2: number = 0;
   public loading: boolean = false;
   public selectedBgColor: string = "";
 
@@ -23,6 +25,14 @@ export class APIComponent implements OnInit {
     this.customService.selectedBgColor$.subscribe((value) => {
       this.selectedBgColor = value;
     });
+  }
+
+
+  HolaMundoCalculo(){
+    let CalculoInterno: number;
+   CalculoInterno = this.Calculo1 + this.Calculo2;
+
+   alert(CalculoInterno);
   }
 
   HolaMundo(){

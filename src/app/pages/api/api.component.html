@@ -4,10 +4,22 @@
     </div>
 </ng-container>
 <ng-template #elseBlock>
+
+
     <div class="container mt-5 p-2" [ngStyle]="{'background-color': selectedBgColor}">
+
+       <h1>llamar a API de Internet</h1>
         <p>Hola, que tal soy el componente API! y te traere cosas de internet!</p>
 
         <p>{{ResultApi}}</p>
+
+        <hr size="8px" color="black" />
+        <h1>Calcular 2 Numeros</h1>
+
+        <input type="number" class="form-control mb-2" placeholder="Calculo1" [(ngModel)]="Calculo1">
+        <input type="number" class="form-control mb-2" placeholder="Calculo2" [(ngModel)]="Calculo2">
+        <button class="btn btn-success" (click)="HolaMundoCalculo()">Calcula</button>
+
     </div>
 </ng-template>
 
