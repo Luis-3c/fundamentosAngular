@@ -2,6 +2,10 @@
     <div class="row">
         <div class="col-6" [formGroup]="homeForm">
             <input type="text" class="form-control mb-2" placeholder="city" [(ngModel)]="city" formControlName="city">
+            <div *ngIf="homeForm.controls['city'].errors">
+                <p *ngIf="homeForm.controls['city'].hasError('required')" style="color: red;">*</p>
+                <p *ngIf="homeForm.controls['city'].hasError('maxlength')" style="color: red;">El texto no puede ser mayor a 5 caracteres</p>
+            </div>
             <input type="text" class="form-control mb-2" placeholder="country" [(ngModel)]="country" formControlName="country">
             <button class="btn btn-success" (click)="addClick()" [disabled]="homeForm.invalid">ADD</button>
         </div>
