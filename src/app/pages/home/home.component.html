@@ -1,9 +1,9 @@
 <div class="container mt-5 p-2" [ngStyle]="{'background-color': selectedBgColor}">
     <div class="row">
-        <div class="col-6">
-            <input type="text" class="form-control mb-2" placeholder="city" [(ngModel)]="city">
-            <input type="text" class="form-control mb-2" placeholder="country" [(ngModel)]="country">
-            <button class="btn btn-success" (click)="addClick()">ADD</button>
+        <div class="col-6" [formGroup]="homeForm">
+            <input type="text" class="form-control mb-2" placeholder="city" [(ngModel)]="city" formControlName="city">
+            <input type="text" class="form-control mb-2" placeholder="country" [(ngModel)]="country" formControlName="country">
+            <button class="btn btn-success" (click)="addClick()" [disabled]="homeForm.invalid">ADD</button>
         </div>
         <div class="col-6">
             <app-cities-table [citiesList]="citiesList" (clearList)="clearList()"></app-cities-table>

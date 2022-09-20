@@ -5,11 +5,13 @@
         <th>País</th>
     </thead>
     <tbody>
-        <tr *ngFor="let c of citiesList; let i = index">
+        <tr *ngFor="let c of returnedList; let i = index">
             <td>{{i + 1}}</td>
             <td>{{c.city}}</td>
             <td>{{c.country}}</td>
         </tr>
     </tbody>
 </table>
+<pagination [totalItems]="citiesList.length" (pageChanged)="pageChanged($event)"  [itemsPerPage]="itemsPerPage" previousText="&lsaquo;&lsaquo;" nextText="&rsaquo;&rsaquo;">
+</pagination>
 <button class="btn btn-success" (click)="resetTable()">Reset</button>
